@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  duration_in_minutes: 1
+  category: MyString
+  prompt: MyString
+  output: MyText
+
+two:
+  duration_in_minutes: 1
+  category: MyString
+  prompt: MyString
+  output: MyText

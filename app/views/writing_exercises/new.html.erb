@@ -1,0 +1,11 @@
+<% content_for :title, "New writing exercise" %>
+
+<h1>New writing exercise</h1>
+
+<%= render "form", writing_exercise: @writing_exercise %>
+
+<br>
+
+<div>
+  <%= link_to "Back to writing exercises", writing_exercises_path %>
+</div>

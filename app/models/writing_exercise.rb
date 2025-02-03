@@ -1,0 +1,2 @@
+class WritingExercise < ApplicationRecord
+end
