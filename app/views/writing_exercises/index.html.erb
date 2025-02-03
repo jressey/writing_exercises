@@ -4,14 +4,14 @@
 <% content_for :title, "Writing exercises" %>
 
 <h1>Writing exercises</h1>
-  <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <ul class="grid grid-cols-1">
     <% @writing_exercises.each do |writing_exercise| %>
       <li class="bg-white shadow-md hover:bg-gray-100 rounded py-4 px-6">
         <%= render writing_exercise %>
+        <p>
+          <%= link_to "Show this writing exercise", writing_exercise %>
+        </p>
       </li>
-      <p>
-        <%= link_to "Show this writing exercise", writing_exercise %>
-      </p>
     <% end %>
   </ul>
 
