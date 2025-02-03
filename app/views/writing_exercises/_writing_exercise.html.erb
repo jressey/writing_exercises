@@ -1,4 +1,5 @@
 <div id="<%= dom_id writing_exercise %>">
+  <h2 class="text-lg font-bold"><%= writing_exercise.prompt %></h2>
   <p>
     <strong>Created:</strong>
     <%= writing_exercise.created_at.strftime("%b %d %Y") %>
@@ -15,13 +16,7 @@
   </p>
 
   <p>
-    <strong>Prompt:</strong>
-    <%= writing_exercise.prompt %>
-  </p>
-
-  <p>
     <strong>Output:</strong>
     <%= writing_exercise.output %>
   </p>
-
 </div>

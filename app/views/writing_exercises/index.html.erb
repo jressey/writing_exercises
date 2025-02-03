@@ -1,16 +1,21 @@
+<div id="writing_exercises">
 <p style="color: green"><%= notice %></p>
 
 <% content_for :title, "Writing exercises" %>
 
 <h1>Writing exercises</h1>
-
-<div id="writing_exercises">
-  <% @writing_exercises.each do |writing_exercise| %>
-    <%= render writing_exercise %>
-    <p>
-      <%= link_to "Show this writing exercise", writing_exercise %>
-    </p>
-  <% end %>
-</div>
+  <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <% @writing_exercises.each do |writing_exercise| %>
+      <li class="bg-white shadow-md hover:bg-gray-100 rounded py-4 px-6">
+        <%= render writing_exercise %>
+      </li>
+      <p>
+        <%= link_to "Show this writing exercise", writing_exercise %>
+      </p>
+    <% end %>
+  </ul>
 
 <%= link_to "New writing exercise", new_writing_exercise_path %>
+
+</div>
+
