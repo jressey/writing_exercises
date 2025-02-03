@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_02_03_011942) do
+ActiveRecord::Schema[8.0].define(version: 2025_02_03_201528) do
+  create_table "comments", force: :cascade do |t|
+    t.integer "writing_exercise_id", null: false
+    t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["writing_exercise_id"], name: "index_comments_on_writing_exercise_id"
+  end
+
   create_table "writing_exercises", force: :cascade do |t|
     t.integer "duration_in_minutes"
     t.string "category"
@@ -19,4 +27,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_02_03_011942) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_foreign_key "comments", "writing_exercises"
 end
